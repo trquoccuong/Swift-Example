@@ -1,0 +1,25 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+depends-top-level:
+- "print"
+- "StringLiteralType"
+depends-member:
+depends-nominal:
+depends-dynamic-lookup:
+depends-external:
+- "/usr/swift/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/usr/swift/lib/swift/shims/UnicodeShims.h"
+- "/usr/swift/lib/swift/shims/SwiftStdint.h"
+- "/usr/swift/lib/swift/shims/SwiftStddef.h"
+- "/usr/swift/lib/swift/shims/LibcShims.h"
+- "/usr/swift/lib/swift/shims/RuntimeStubs.h"
+- "/usr/swift/lib/swift/shims/RuntimeShims.h"
+- "/usr/swift/lib/swift/shims/RefCount.h"
+- "/usr/swift/lib/swift/shims/HeapObject.h"
+- "/usr/swift/lib/swift/shims/GlobalObjects.h"
+- "/usr/swift/lib/swift/shims/FoundationShims.h"
+- "/usr/swift/lib/swift/shims/CoreFoundationShims.h"
+- "/usr/swift/lib/swift/shims/module.map"
+interface-hash: "429f089615b7be4ede2d27d4865bd82d"

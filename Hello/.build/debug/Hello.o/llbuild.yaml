@@ -1,0 +1,29 @@
+client:
+  name: swift-build
+
+tools: {}
+
+targets:
+  "": [<Hello>]
+  Hello: [<Hello>]
+
+commands:
+  <Hello-swiftc>:
+    tool: swift-compiler
+    executable: "/usr/swift/bin/swiftc"
+    inputs: ["/swift/Hello/Sources/main.swift"]
+    outputs: ["<Hello-swiftc>","/swift/Hello/.build/debug/Hello.swiftmodule","/swift/Hello/.build/debug/Hello.o/Sources/main.swift.o"]
+    module-name: "Hello"
+    module-output-path: "/swift/Hello/.build/debug/Hello.swiftmodule"
+    is-library: false
+    sources: ["/swift/Hello/Sources/main.swift"]
+    objects: ["/swift/Hello/.build/debug/Hello.o/Sources/main.swift.o"]
+    import-paths: ["/swift/Hello/.build/debug"]
+    temps-path: "/swift/Hello/.build/debug/Hello.o/Hello"
+    other-args: ["-j8","-Onone","-g","-I","/usr/local/include"]
+  <Hello>:
+    tool: shell
+    inputs: ["<Hello-swiftc>","/swift/Hello/.build/debug/Hello.o/Sources/main.swift.o"]
+    outputs: ["<Hello>","/swift/Hello/.build/debug/Hello"]
+    args: ["/usr/swift/bin/swiftc","-o","/swift/Hello/.build/debug/Hello","/swift/Hello/.build/debug/Hello.o/Sources/main.swift.o","-L/usr/local/lib"]
+    description: "Linking Executable:  .build/debug/Hello"

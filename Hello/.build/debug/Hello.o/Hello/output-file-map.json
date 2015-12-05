@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/swift/Hello/.build/debug/Hello.o/Hello/master.swiftdeps"
+  },
+  "/swift/Hello/Sources/main.swift": {
+    "dependencies": "/swift/Hello/.build/debug/Hello.o/Hello/main.d",
+    "object": "/swift/Hello/.build/debug/Hello.o/Sources/main.swift.o",
+    "swiftmodule": "/swift/Hello/.build/debug/Hello.o/Hello/main~partial.swiftmodule",
+    "swift-dependencies": "/swift/Hello/.build/debug/Hello.o/Hello/main.swiftdeps"
+  }
+}
